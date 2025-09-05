@@ -7,6 +7,17 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 --
+-- Disable auto formatting for .env files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "sh",
+  callback = function()
+    local filename = vim.fn.expand("%:t")
+    if filename:match("^%.env") then
+      vim.b.autoformat = false
+    end
+  end,
+})
+
 -- -- Autocommand to resize terminal window on open
 vim.api.nvim_create_autocmd("TermOpen", {
   group = vim.api.nvim_create_augroup("lazyvim_terminal_resize", { clear = true }),
