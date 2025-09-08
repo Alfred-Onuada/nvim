@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- -- Autocommand to resize terminal window on open
+-- Autocommand to resize terminal window on open
 vim.api.nvim_create_autocmd("TermOpen", {
   group = vim.api.nvim_create_augroup("lazyvim_terminal_resize", { clear = true }),
   callback = function()
