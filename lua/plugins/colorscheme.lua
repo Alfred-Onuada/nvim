@@ -1,12 +1,17 @@
 return {
-  -- add github-dark
-  { "wojciechkepka/vim-github-dark" },
+  -- add gruvbox
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      transparent_mode = true,
+    },
+  },
 
-  -- Configure LazyVim to use ghdark by default
+  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "ghdark",
+      colorscheme = "gruvbox",
     },
   },
 }
