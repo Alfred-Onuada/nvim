@@ -6,8 +6,16 @@ return {
     opts = {
       explorer = {},
       picker = {
-        ignored = true,
-        hidden = true,
+        hidden = true, -- still show dotfiles
+        ignored = true, -- show gitignored files
+        sources = {
+          files = {
+            exclude = { "node_modules/**" }, -- ignore node_modules
+          },
+          grep = {
+            args = { "--glob", "!**/node_modules/**" }, -- ignore node_modules
+          },
+        },
       },
     },
   },
