@@ -16,6 +16,10 @@ return {
             },
           },
         },
+        -- Disable the default community server so Mason stops auto-installing it
+        kotlin_language_server = false,
+        -- Ensure your new manually-installed JetBrains server is enabled
+        kotlin_lsp = {},
       },
     },
   },

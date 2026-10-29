@@ -8,6 +8,10 @@ return {
         json = { "prettier" }, -- Use prettier for JSON as well
         markdown = { "prettier" }, -- For md as well
         sql = { "prettier" }, -- for SQL
+        kotlin = { "ktfmt" }, -- for Kotlin
+      },
+      formatters = {
+        ktlint = false, -- Disable ktlint
       },
     },
   },
